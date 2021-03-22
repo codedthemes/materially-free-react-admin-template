@@ -1,0 +1,141 @@
+@import 'themes-vars';
+@import 'plugins/plugins';
+
+/* breadcrumb */
+.icon-breadcrumb {
+    margin-right: 5px;
+}
+
+.link-breadcrumb {
+    font-size: 0.75rem;
+    display: flex;
+    text-decoration: none;
+}
+
+/* card */
+
+.card-header {
+    font-weight: 600 !important;
+    font-size: 15px;
+}
+
+.apexcharts-legend-marker {
+    margin-right: 8px !important;
+}
+
+.MuiCard-root {
+    &.bg-primary {
+        background-color: $primary;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+    &.bg-secondary {
+        background-color: $secondary;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $secondary;
+            color: #fff;
+        }
+    }
+    &.bg-error {
+        background-color: $error;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $error;
+            color: #fff;
+        }
+    }
+    &.bg-warning {
+        background-color: $warning;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $warning;
+            color: #fff;
+        }
+    }
+    &.bg-info {
+        background-color: $info;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $info;
+            color: #fff;
+        }
+    }
+    &.bg-success {
+        background-color: $success;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $success;
+            color: #fff;
+        }
+    }
+    &.bg-dark {
+        background-color: $dark;
+        color: #fff;
+        .MuiCardHeader-root {
+            background-color: $dark;
+            color: #fff;
+        }
+    }
+    &.outline-primary {
+        border: 1px solid + $primary;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $primary;
+        }
+    }
+    &.outline-secondary {
+        border: 1px solid $secondary;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $secondary;
+        }
+    }
+    &.outline-error {
+        border: 1px solid $error;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $error;
+        }
+    }
+    &.outline-warning {
+        border: 1px solid $warning;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $warning;
+        }
+    }
+    &.outline-info {
+        border: 1px solid $info;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $info;
+        }
+    }
+    &.outline-success {
+        border: 1px solid $success;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $success;
+        }
+    }
+    &.outline-dark {
+        border: 1px solid $dark;
+        .MuiCardHeader-root {
+            border-bottom: 1px solid + $dark;
+        }
+    }
+}
+
+.f-right {
+    float: right;
+}
+.p-0 {
+    padding: 0 !important;
+}
+.p-20 {
+    padding: 20px !important;
+}
+
+.responsive-table-card {
+    .MuiTableCell-root {
+        white-space: unset;
+    }
+}
