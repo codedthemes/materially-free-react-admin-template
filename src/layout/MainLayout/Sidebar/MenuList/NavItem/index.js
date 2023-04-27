@@ -1,107 +1,96 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+// material-ui
+import { useTheme } from '@mui/material/styles';
+import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material';
+
+// third party
 import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles } from '@material-ui/core/styles';
-import { Avatar, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
 
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+// project import
+import * as actionTypes from 'store/actions';
 
-import Chip from '../../../../../component/Chip';
-import * as actionTypes from '../../../../../store/actions';
+// assets
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const useStyles = makeStyles((theme) => ({
-    listIcon: {
-        minWidth: '25px',
-    },
-    listItem: {
+// ==============================|| NAV ITEM ||============================== //
+
+const NavItem = ({ item, level }) => {
+  const theme = useTheme();
+  const customization = useSelector((state) => state.customization);
+  const dispatch = useDispatch();
+  const Icon = item.icon;
+  const itemIcon = item.icon ? <Icon color="inherit" /> : <ArrowForwardIcon color="inherit" fontSize={level > 0 ? 'inherit' : 'default'} />;
+
+  let itemTarget = '';
+  if (item.target) {
+    itemTarget = '_blank';
+  }
+  let listItemProps = { component: Link, to: item.url };
+  if (item.external) {
+    listItemProps = { component: 'a', href: item.url };
+  }
+
+  return (
+    <ListItemButton
+      disabled={item.disabled}
+      sx={{
+        ...(level > 1 && { backgroundColor: 'transparent !important', py: 1, borderRadius: '5px' }),
         borderRadius: '5px',
         marginBottom: '5px',
-    },
-    subMenuCaption: {
-        ...theme.typography.subMenuCaption,
-    },
-    listItemNoBack: {
-        backgroundColor: 'transparent !important',
-        paddingTop: '8px',
-        paddingBottom: '8px',
-        borderRadius: '5px',
-    },
-    errorChip: {
-        color: theme.palette.error.main,
-        backgroundColor: '#ffcdd2',
-        marginRight: '20px',
-    },
-}));
+        pl: `${level * 16}px`
+      }}
+      selected={customization.isOpen === item.id}
+      component={Link}
+      onClick={() => dispatch({ type: actionTypes.MENU_OPEN, isOpen: item.id })}
+      to={item.url}
+      target={itemTarget}
+      {...listItemProps}
+    >
+      <ListItemIcon sx={{ minWidth: 25 }}>{itemIcon}</ListItemIcon>
+      <ListItemText
+        primary={
+          <Typography sx={{ pl: 1.4 }} variant={customization.isOpen === item.id ? 'subtitle1' : 'body1'} color="inherit">
+            {item.title}
+          </Typography>
+        }
+        secondary={
+          item.caption && (
+            <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption, pl: 2 }} display="block" gutterBottom>
+              {item.caption}
+            </Typography>
+          )
+        }
+      />
+      {item.chip && (
+        <Chip
+          color={item.chip.color}
+          variant={item.chip.variant}
+          size={item.chip.size}
+          label={item.chip.label}
+          avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
+        />
+      )}
+    </ListItemButton>
+  );
+};
 
-const NavItem = (props) => {
-    const classes = useStyles();
-    const customization = useSelector((state) => state.customization);
-    const dispatch = useDispatch();
-    const { item, level } = props;
-
-    const Icon = item.icon;
-    const itemIcon = item.icon ? (
-        <Icon className={classes.listCustomIcon} color="inherit" />
-    ) : (
-        <ArrowForwardIcon className={classes.listCustomIcon} color="inherit" fontSize={level > 0 ? 'inherit' : 'default'} />
-    );
-
-    let itemIconClass = !item.icon ? classes.listIcon : classes.menuIcon;
-
-    let itemTarget = '';
-    if (item.target) {
-        itemTarget = '_blank';
-    }
-
-    let listItemProps = { component: Link, to: item.url };
-    if (item.external) {
-        listItemProps = { component: 'a', href: item.url };
-    }
-
-    return (
-        <ListItem
-            disabled={item.disabled}
-            className={level > 1 ? classes.listItemNoBack : classes.listItem}
-            selected={customization.isOpen === item.id}
-            component={Link}
-            onClick={() => dispatch({ type: actionTypes.MENU_OPEN, isOpen: item.id })}
-            to={item.url}
-            target={itemTarget}
-            button
-            style={{ paddingLeft: level * 16 + 'px' }}
-            {...listItemProps}
-        >
-            <ListItemIcon className={itemIconClass}>{itemIcon}</ListItemIcon>
-            <ListItemText
-                primary={
-                    <Typography
-                        variant={customization.isOpen === item.id ? 'subtitle1' : 'body1'}
-                        color="inherit"
-                        className={classes.listItemTypography}
-                    >
-                        {item.title}
-                    </Typography>
-                }
-                secondary={
-                    item.caption && (
-                        <Typography variant="caption" className={classes.subMenuCaption} display="block" gutterBottom>
-                            {item.caption}
-                        </Typography>
-                    )
-                }
-            />
-            {item.chip && (
-                <Chip
-                    className={item.chip.error && classes.errorChip}
-                    color={item.chip.color}
-                    variant={item.chip.variant}
-                    size={item.chip.size}
-                    label={item.chip.label}
-                    avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
-                />
-            )}
-        </ListItem>
-    );
+NavItem.propTypes = {
+  item: PropTypes.object,
+  level: PropTypes.number,
+  icon: PropTypes.object,
+  target: PropTypes.object,
+  url: PropTypes.string,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  title: PropTypes.string,
+  caption: PropTypes.string,
+  chip: PropTypes.object,
+  color: PropTypes.string,
+  label: PropTypes.string,
+  avatar: PropTypes.object
 };
 
 export default NavItem;

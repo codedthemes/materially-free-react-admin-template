@@ -1,57 +1,36 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { makeStyles, Card, CardContent, Typography, Divider } from '@material-ui/core';
 
-import MuiBreadcrumbs from '@material-ui/core/Breadcrumbs';
+// material-ui
+import { useTheme } from '@mui/material/styles';
+import { Card, CardContent, Typography, Divider, Box } from '@mui/material';
+import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        background: 'transparent',
-        boxShadow: 'none',
-        border: 'none',
-    },
-    cardClass: {
-        padding: theme.spacing(3),
-    },
-    cardContent: {
-        paddingLeft: 0,
-        paddingTop: 0,
-        paddingBottom: '0 !important',
-    },
-    divider: {
-        marginBottom: theme.spacing(3),
-        marginTop: theme.spacing(2),
-    },
-    spacer: {
-        marginBottom: theme.spacing(3),
-    },
-    breadcrumbTitle: {
-        fontWeight: 500,
-        marginTop: theme.spacing(1),
-    },
-}));
+// ==============================|| BREADCRUMB ||============================== //
 
-const Breadcrumbs = (props) => {
-    const classes = useStyles();
-    const { color, outline, size, title, divider, isCard, ...rest } = props;
-    let cardClass = classes.root;
-    if (isCard) {
-        cardClass = classes.cardClass;
-    }
+const Breadcrumbs = ({ title, divider, isCard, ...rest }) => {
+  const theme = useTheme();
 
-    return (
-        <Card className={cardClass}>
-            <CardContent className={classes.cardContent}>
-                <MuiBreadcrumbs {...rest} />
-                {title && (
-                    <Typography className={classes.breadcrumbTitle} variant="h3">
-                        {title}
-                    </Typography>
-                )}
-                {divider === false && !isCard && <div className={classes.spacer} />}
-                {divider !== false && <Divider className={classes.divider} />}
-            </CardContent>
-        </Card>
-    );
+  return (
+    <Card sx={!isCard ? { background: 'transparent', boxShadow: 'none', border: 'none' } : { padding: theme.spacing(3) }}>
+      <CardContent sx={{ pl: 0, pt: 0, pb: '0 !important' }}>
+        <MuiBreadcrumbs {...rest} />
+        {title && (
+          <Typography sx={{ fontWeight: 500, mt: theme.spacing(1) }} variant="h3">
+            {title}
+          </Typography>
+        )}
+        {divider === false && !isCard && <Box sx={{ mb: theme.spacing(3) }} />}
+        {divider !== false && <Divider sx={{ mb: theme.spacing(3), mt: theme.spacing(2) }} />}
+      </CardContent>
+    </Card>
+  );
+};
+
+Breadcrumbs.propTypes = {
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  divider: PropTypes.bool,
+  isCard: PropTypes.string
 };
 
 export default Breadcrumbs;
