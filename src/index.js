@@ -10,7 +10,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 // project import
-import config from './config';
 import App from 'layout/App';
 import reducer from 'store/reducer';
 import * as serviceWorker from 'serviceWorker';
@@ -23,7 +22,7 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter basename={config.basename}>
+    <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>
       <App />
     </BrowserRouter>
   </Provider>

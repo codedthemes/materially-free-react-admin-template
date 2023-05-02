@@ -2,7 +2,6 @@
   "name": "materially-free-react-admin-template",
   "version": "5.0.0",
   "private": true,
-  "homepage": "http://lite.codedthemes.com/materially/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -45,6 +44,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "build-stage": "env-cmd -f .env.qa react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -74,6 +74,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "7.0.1",
