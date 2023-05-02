@@ -1,76 +1,60 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { Box, Grid, makeStyles, IconButton, Hidden } from '@material-ui/core';
 
-import MenuTwoToneIcon from '@material-ui/icons/MenuTwoTone';
+// material-ui
+import { useTheme } from '@mui/material/styles';
+import { Box, Grid, IconButton } from '@mui/material';
 
+// project import
 import SearchSection from './SearchSection';
-import Customization from './Customization';
 import ProfileSection from './ProfileSection';
 import NotificationSection from './NotificationSection';
+import { drawerWidth } from 'config.js';
 
-import logo from './../../../assets/images/logo.svg';
-import { drawerWidth } from './../../../store/constant';
+// assets
+import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
+import logo from 'assets/images/logo.svg';
 
-const useStyles = makeStyles((theme) => ({
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(1.25),
-    },
-    sectionDesktop: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-        },
-    },
-    sectionMobile: {
-        display: 'flex',
-        [theme.breakpoints.up('md')]: {
-            display: 'none',
-        },
-    },
-    menuIcon: {
-        fontSize: '1.5rem',
-    },
-}));
+// ==============================|| HEADER ||============================== //
 
-const Header = (props) => {
-    const { drawerToggle } = props;
-    const classes = useStyles();
+const Header = ({ drawerToggle }) => {
+  const theme = useTheme();
 
-    return (
-        <React.Fragment>
-            <Box width={drawerWidth}>
-                <Grid container justify="space-between" alignItems="center">
-                    <Hidden smDown>
-                        <Grid item>
-                            <Box mt={0.5}>
-                                <img src={logo} alt="Logo" />
-                            </Box>
-                        </Grid>
-                    </Hidden>
-                    <Grid item>
-                        <IconButton
-                            edge="start"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={drawerToggle}
-                        >
-                            <MenuTwoToneIcon className={classes.menuIcon} />
-                        </IconButton>
-                    </Grid>
-                </Grid>
-            </Box>
-            <div className={classes.grow} />
+  return (
+    <>
+      <Box width={drawerWidth}>
+        <Grid container justifyContent="space-between" alignItems="center">
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Grid item>
+              <Box mt={0.5}>
+                <img src={logo} alt="Logo" />
+              </Box>
+            </Grid>
+          </Box>
+          <Grid item>
+            <IconButton
+              edge="start"
+              sx={{ mr: theme.spacing(1.25) }}
+              color="inherit"
+              aria-label="open drawer"
+              onClick={drawerToggle}
+              size="large"
+            >
+              <MenuTwoToneIcon sx={{ fontSize: '1.5rem' }} />
+            </IconButton>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={{ flexGrow: 1 }} />
+      <SearchSection theme="light" />
+      <NotificationSection />
+      <ProfileSection />
+    </>
+  );
+};
 
-            <SearchSection theme="light" />
-            <Customization />
-            <NotificationSection />
-            <ProfileSection />
-        </React.Fragment>
-    );
+Header.propTypes = {
+  drawerToggle: PropTypes.func
 };
 
 export default Header;

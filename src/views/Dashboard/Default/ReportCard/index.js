@@ -1,61 +1,69 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import { makeStyles, Card, CardContent, Grid, Typography } from '@material-ui/core';
+// material-ui
+import { useTheme } from '@mui/material/styles';
+import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-    secondary: {
-        marginTop: '.5rem',
-    },
-    footer: {
-        textAlign: 'center',
-        padding: theme.spacing(1.2),
-        paddingLeft: '20px',
-        paddingRight: '20px',
-        color: theme.palette.common.white,
-    },
-}));
+// ==============================|| REPORT CARD ||============================== //
 
-const ReportCard = (props) => {
-    const { primary, secondary, iconPrimary, color, footerData, iconFooter } = props;
-    const classes = useStyles();
+const ReportCard = ({ primary, secondary, iconPrimary, color, footerData, iconFooter }) => {
+  const theme = useTheme();
+  const IconPrimary = iconPrimary;
+  const primaryIcon = iconPrimary ? <IconPrimary fontSize="large" /> : null;
+  const IconFooter = iconFooter;
+  const footerIcon = iconFooter ? <IconFooter /> : null;
 
-    const IconPrimary = iconPrimary;
-    const primaryIcon = iconPrimary ? <IconPrimary fontSize="large" /> : null;
+  return (
+    <Card>
+      <CardContent>
+        <Grid container justifyContent="space-between" alignItems="center">
+          <Grid item>
+            <Typography variant="h3" sx={{ color: color }}>
+              {primary}
+            </Typography>
+            <Typography variant="subtitle1" sx={{ marginTop: '.5rem' }}>
+              {secondary}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h2" sx={{ color: color }}>
+              {primaryIcon}
+            </Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
+      <Box sx={{ background: color }}>
+        <Grid
+          container
+          justifyContent="space-between"
+          sx={{
+            textAlign: 'center',
+            padding: theme.spacing(1.2),
+            pl: 2.5,
+            pr: 2.5,
+            color: theme.palette.common.white
+          }}
+        >
+          <Grid item>
+            <Typography variant="body2">{footerData}</Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="body2">{footerIcon}</Typography>
+          </Grid>
+        </Grid>
+      </Box>
+    </Card>
+  );
+};
 
-    const IconFooter = iconFooter;
-    const footerIcon = iconFooter ? <IconFooter /> : null;
-
-    return (
-        <Card>
-            <CardContent>
-                <Grid container justify="space-between" alignItems="center">
-                    <Grid item>
-                        <Typography variant="h3" style={{ color: color }}>
-                            {primary}
-                        </Typography>
-                        <Typography variant="subtitle1" className={classes.secondary}>
-                            {secondary}
-                        </Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography variant="h2" style={{ color: color }}>
-                            {primaryIcon}
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </CardContent>
-            <div style={{ background: color }}>
-                <Grid container justify="space-between" className={classes.footer}>
-                    <Grid item>
-                        <Typography variant="body2">{footerData}</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography variant="body2">{footerIcon}</Typography>
-                    </Grid>
-                </Grid>
-            </div>
-        </Card>
-    );
+ReportCard.propTypes = {
+  primary: PropTypes.string,
+  secondary: PropTypes.string,
+  iconPrimary: PropTypes.object,
+  footerData: PropTypes.string,
+  iconFooter: PropTypes.object,
+  color: PropTypes.string
 };
 
 export default ReportCard;

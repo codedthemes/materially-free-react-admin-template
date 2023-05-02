@@ -1,9 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const MinimalLayout = (props) => {
-    const { children } = props;
+// ==============================|| MINIMAL LAYOUT ||============================== //
 
-    return <Fragment>{children}</Fragment>;
+const MinimalLayout = () => {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 
 export default MinimalLayout;
