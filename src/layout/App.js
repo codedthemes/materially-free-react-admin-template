@@ -11,7 +11,6 @@ import { useSelector } from 'react-redux';
 import theme from 'themes';
 import Routes from 'routes/index';
 import NavigationScroll from './NavigationScroll';
-import Snackbar from 'component/Snackbar';
 
 // ==============================|| APP ||============================== //
 
@@ -26,7 +25,6 @@ const App = () => {
             <ThemeProvider theme={theme(customization)}>
               <CssBaseline />
               <Routes />
-              <Snackbar />
             </ThemeProvider>
           </StyledEngineProvider>
         </NavigationScroll>
