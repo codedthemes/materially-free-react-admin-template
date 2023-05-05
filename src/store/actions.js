@@ -1,3 +1,5 @@
+// action - account reducer
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
 export const MENU_OPEN = '@customization/MENU_OPEN';
-export const THEME_LOCALE = '@customization/THEME_LOCALE';
-export const THEME_RTL = '@customization/THEME_RTL';
+export const MENU_TYPE = '@customization/MENU_TYPE';

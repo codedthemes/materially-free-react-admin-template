@@ -1,84 +1,79 @@
 import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useMediaQuery, useTheme, AppBar, CssBaseline, Toolbar } from '@material-ui/core';
+import { Outlet } from 'react-router-dom';
 
-import { drawerWidth } from './../../store/constant';
+// material-ui
+import { styled, useTheme } from '@mui/material/styles';
+import { useMediaQuery, AppBar, Box, Toolbar } from '@mui/material';
+
+// project import
+import { drawerWidth } from 'config.js';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
-    appBar: {
-        transition: theme.transitions.create('width'),
-        [theme.breakpoints.up('md')]: {
-            width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
-        },
-    },
-    toolbar: theme.mixins.toolbar,
-    content: {
-        width: '100%',
-        minHeight: '100vh',
-        flexGrow: 1,
-        /*padding: theme.spacing(3),*/
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        [theme.breakpoints.up('md')]: {
-            marginLeft: -drawerWidth,
-            width: `calc(100% - ${drawerWidth}px)`,
-        },
-    },
-    contentShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: 0,
-    },
-    main: {
-        padding: theme.spacing(5),
-        [theme.breakpoints.down('sm')]: {
-            padding: theme.spacing(3),
-        },
-    },
-    header: {
-        zIndex: 1201,
-    },
+// custom style
+const Main = styled((props) => <main {...props} />)(({ theme }) => ({
+  width: '100%',
+  minHeight: '100vh',
+  flexGrow: 1,
+  transition: theme.transitions.create('margin', {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen
+  }),
+  [theme.breakpoints.up('md')]: {
+    marginLeft: -drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`
+  }
 }));
 
-const MainLayout = ({ children }) => {
-    const classes = useStyles();
-    const theme = useTheme();
-    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
-    const [drawerOpen, setDrawerOpen] = React.useState(false);
+const OutletDiv = styled((props) => <div {...props} />)(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(3)
+  },
+  padding: theme.spacing(5)
+}));
 
-    const handleDrawerToggle = () => {
-        setDrawerOpen(!drawerOpen);
-    };
+// ==============================|| MAIN LAYOUT ||============================== //
 
-    React.useEffect(() => {
-        setDrawerOpen(matchUpMd);
-    }, [matchUpMd]);
+const MainLayout = () => {
+  const theme = useTheme();
+  const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
 
-    return (
-        <div className={classes.root}>
-            <CssBaseline />
-            <AppBar position="fixed" className={classes.header}>
-                <Toolbar>
-                    <Header drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
-                </Toolbar>
-            </AppBar>
-            <Sidebar drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
-            <main className={clsx(classes.content, { [classes.contentShift]: drawerOpen })}>
-                <div className={classes.toolbar} />
-                <div className={classes.main}>{children}</div>
-            </main>
-        </div>
-    );
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  React.useEffect(() => {
+    setDrawerOpen(matchUpMd);
+  }, [matchUpMd]);
+
+  return (
+    <Box sx={{ display: 'flex', width: '100%' }}>
+      <AppBar position="fixed" sx={{ zIndex: 1200 }}>
+        <Toolbar>
+          <Header drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
+        </Toolbar>
+      </AppBar>
+      <Sidebar drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
+      <Main
+        style={{
+          ...(drawerOpen && {
+            transition: theme.transitions.create('margin', {
+              easing: theme.transitions.easing.easeOut,
+              duration: theme.transitions.duration.enteringScreen
+            }),
+            marginLeft: 0,
+            marginRight: 'inherit'
+          })
+        }}
+      >
+        <Box sx={theme.mixins.toolbar} />
+        <OutletDiv>
+          <Outlet />
+        </OutletDiv>
+      </Main>
+    </Box>
+  );
 };
 
 export default MainLayout;

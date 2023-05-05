@@ -1,32 +1,28 @@
+// action - state management
 import * as actionTypes from './actions';
-import config from '../config';
+
+// ==============================|| CUSTOMIZATION REDUCER ||============================== //
 
 export const initialState = {
-    isOpen: 'dashboard', //for active default menu
-    locale: config.i18n,
-    rtlLayout: config.rtlLayout,
+  isOpen: 'dashboard', //for active default menu
+  navType: ''
 };
 
 const customizationReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case actionTypes.MENU_OPEN:
-            return {
-                ...state,
-                isOpen: action.isOpen,
-            };
-        case actionTypes.THEME_LOCALE:
-            return {
-                ...state,
-                locale: action.locale,
-            };
-        case actionTypes.THEME_RTL:
-            return {
-                ...state,
-                rtlLayout: action.rtlLayout,
-            };
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case actionTypes.MENU_OPEN:
+      return {
+        ...state,
+        isOpen: action.isOpen
+      };
+    case actionTypes.MENU_TYPE:
+      return {
+        ...state,
+        navType: action.navType
+      };
+    default:
+      return state;
+  }
 };
 
 export default customizationReducer;

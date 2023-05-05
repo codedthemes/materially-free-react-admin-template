@@ -1,191 +1,177 @@
 import React from 'react';
-import { fade, Box, Button, makeStyles, InputBase, Hidden, Popper, Fade, Card, CardContent, Grid } from '@material-ui/core';
-import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
-import CloseTwoToneIcon from '@material-ui/icons/CloseTwoTone';
+
+// material-ui
+import { useTheme } from '@mui/material/styles';
+import { alpha, Box, Button, InputBase, Popper, Fade, Card, CardContent, Grid } from '@mui/material';
 import PopupState, { bindToggle, bindPopper } from 'material-ui-popup-state';
 
-const useStyles = makeStyles((theme) => ({
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(2),
-        width: 'auto',
-        [theme.breakpoints.down('xs')]: {
-            marginLeft: 0,
-            marginRight: 0,
-            backgroundColor: 'transparent',
-            '&:hover': {
-                backgroundColor: 'transparent',
-            },
-        },
-    },
-    searchIcon: {
-        padding: theme.spacing(0.75, 1.25),
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: theme.palette.grey[100],
-        [theme.breakpoints.down('xs')]: {
-            padding: theme.spacing(1.25),
-        },
-    },
-    closeIcon: {
-        cursor: 'pointer',
-        padding: theme.spacing(1.25),
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        display: 'flex',
-        color: theme.palette.grey[100],
-    },
-    inputRoot: {
-        color: 'inherit',
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        color: theme.palette.grey[100],
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-        },
-        [theme.breakpoints.up('mobile')]: {
-            width: '100%',
-        },
-        [theme.breakpoints.up('sm')]: {
-            width: '125px',
-            '&:focus': {
-                width: '225px',
-            },
-        },
-    },
-    searchControl: {
-        borderColor: theme.palette.grey[100],
-        width: '434px',
-        marginLeft: '16px',
-        paddingRight: '8px',
-        paddingLeft: '16px',
-        [theme.breakpoints.down('lg')]: {
-            width: '250px',
-        },
-        [theme.breakpoints.down('md')]: {
-            width: '100%',
-            marginLeft: 0,
-            background: '#fff',
-            borderRadius: '12px',
-        },
-    },
-    popperContainer: {
-        zIndex: 1100,
-        width: '100%',
-        top: '10px !important',
-        padding: '0',
-    },
-    cardContent: {
-        padding: '12px !important',
-        backgroundColor: theme.palette.secondary.main,
-    },
-    card: {
-        borderRadius: 0,
-        background: theme.palette.primary[200],
-        [theme.breakpoints.down('sm')]: {
-            border: 0,
-            boxShadow: 'none',
-        },
-    },
-    menuButton: {
-        [theme.breakpoints.down('xs')]: {
-            minWidth: '35px',
-        },
-    },
-    menuIcon: {
-        fontSize: '1.5rem',
-    },
-}));
+// assets
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
+
+// ==============================|| SEARCH SECTION ||============================== //
 
 const SearchSection = () => {
-    const classes = useStyles();
+  const theme = useTheme();
 
-    return (
-        <div className={classes.search}>
-            <Hidden smUp>
-                <PopupState variant="popper" popupId="demo-popup-popper">
-                    {(popupState) => (
-                        <React.Fragment>
-                            <Button className={classes.menuButton} aria-haspopup="true" {...bindToggle(popupState)} color="inherit">
-                                <SearchTwoToneIcon className={classes.menuIcon} />
-                            </Button>
-                            <Popper
-                                {...bindPopper(popupState)}
-                                transition
-                                className={classes.popperContainer}
-                                popperOptions={{
-                                    modifiers: {
-                                        offset: {
-                                            enable: true,
-                                            offset: '0px, 0px',
-                                        },
-                                        preventOverflow: {
-                                            padding: 0,
-                                        },
-                                    },
+  return (
+    <Box
+      sx={{
+        position: 'relative',
+        borderRadius: 1,
+        backgroundColor: { sm: alpha(theme.palette.common.white, 0.15), xs: 'transparent' },
+        '&:hover': {
+          backgroundColor: { sm: alpha(theme.palette.common.white, 0.25), xs: 'transparent' }
+        },
+        ml: { sm: theme.spacing(1), xs: 0 },
+        mr: { sm: theme.spacing(2), xs: 0 },
+        width: 'auto'
+      }}
+    >
+      <Box sx={{ display: { sm: 'none', xs: 'block' } }}>
+        <PopupState variant="popper" popupId="demo-popup-popper">
+          {(popupState) => (
+            <>
+              <Button
+                sx={{
+                  minWidth: { xs: 35 }
+                }}
+                aria-haspopup="true"
+                {...bindToggle(popupState)}
+                color="inherit"
+              >
+                <SearchTwoToneIcon sx={{ fontSize: '1.5rem' }} />
+              </Button>
+              <Popper
+                {...bindPopper(popupState)}
+                transition
+                sx={{ zIndex: 1100, width: '100%', top: '10px !important', p: 0 }}
+                modifiers={[
+                  {
+                    name: 'offset',
+                    options: {
+                      offset: [0, 10]
+                    }
+                  },
+                  {
+                    name: 'preventOverflow',
+                    options: {
+                      altAxis: true
+                    }
+                  }
+                ]}
+              >
+                {({ TransitionProps }) => (
+                  <Fade {...TransitionProps} timeout={350}>
+                    <Card
+                      sx={{
+                        borderRadius: 0,
+                        background: theme.palette.primary[200],
+                        border: { sm: 0 },
+                        boxShadow: { sm: 'none' }
+                      }}
+                    >
+                      <CardContent sx={{ p: 1.5, backgroundColor: theme.palette.secondary.main }}>
+                        <Grid container alignItems="center" justifyContent="space-between">
+                          <Grid item xs>
+                            <Box display="flex" p={0}>
+                              <Box
+                                sx={{
+                                  p: { sm: theme.spacing(0.75, 1.25), xs: theme.spacing(1.25) },
+                                  position: 'absolute',
+                                  pointerEvents: 'none',
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  color: theme.palette.grey[100]
                                 }}
-                            >
-                                {({ TransitionProps }) => (
-                                    <Fade {...TransitionProps} timeout={350}>
-                                        <Card className={classes.card}>
-                                            <CardContent className={classes.cardContent}>
-                                                <Grid container alignItems="center" justify="space-between">
-                                                    <Grid item xs>
-                                                        <Box display="flex" p={0}>
-                                                            <div className={classes.searchIcon}>
-                                                                <SearchTwoToneIcon color="inherit" />
-                                                            </div>
-                                                            <InputBase
-                                                                fullWidth
-                                                                placeholder="Search…"
-                                                                classes={{
-                                                                    root: classes.inputRoot,
-                                                                    input: classes.inputInput,
-                                                                }}
-                                                                inputProps={{ 'aria-label': 'search' }}
-                                                            />
-                                                            <div className={classes.closeIcon} {...bindToggle(popupState)}>
-                                                                <CloseTwoToneIcon color="inherit" />
-                                                            </div>
-                                                        </Box>
-                                                    </Grid>
-                                                </Grid>
-                                            </CardContent>
-                                        </Card>
-                                    </Fade>
-                                )}
-                            </Popper>
-                        </React.Fragment>
-                    )}
-                </PopupState>
-            </Hidden>
-            <Hidden xsDown>
-                <div className={classes.searchIcon}>
-                    <SearchTwoToneIcon />
-                </div>
-                <InputBase
-                    placeholder="Search…"
-                    classes={{
-                        root: classes.inputRoot,
-                        input: classes.inputInput,
-                    }}
-                    inputProps={{ 'aria-label': 'search' }}
-                />
-            </Hidden>
-        </div>
-    );
+                              >
+                                <SearchTwoToneIcon color="inherit" />
+                              </Box>
+                              <InputBase
+                                fullWidth
+                                placeholder="Search…"
+                                sx={{
+                                  '& .MuiInputBase-root': {
+                                    color: 'inherit'
+                                  },
+                                  '& .MuiInputBase-input': {
+                                    padding: theme.spacing(1, 1, 1, 0),
+                                    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+                                    transition: theme.transitions.create('width'),
+                                    color: theme.palette.grey[100],
+                                    width: { sm: '100%', md: 125 },
+                                    mr: 3,
+                                    '&:focus': {
+                                      width: { md: 225 }
+                                    }
+                                  }
+                                }}
+                                inputProps={{ 'aria-label': 'search' }}
+                              />
+                              <Box
+                                sx={{
+                                  cursor: 'pointer',
+                                  p: theme.spacing(1.25),
+                                  alignItems: 'center',
+                                  justifyContent: 'flex-end',
+                                  display: 'flex',
+                                  color: theme.palette.grey[100]
+                                }}
+                                {...bindToggle(popupState)}
+                              >
+                                <CloseTwoToneIcon color="inherit" />
+                              </Box>
+                            </Box>
+                          </Grid>
+                        </Grid>
+                      </CardContent>
+                    </Card>
+                  </Fade>
+                )}
+              </Popper>
+            </>
+          )}
+        </PopupState>
+      </Box>
+      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+        <Box
+          sx={{
+            p: { sm: theme.spacing(0.75, 1.25), xs: theme.spacing(1.25) },
+            position: 'absolute',
+            pointerEvents: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: theme.palette.grey[100]
+          }}
+        >
+          <SearchTwoToneIcon />
+        </Box>
+        <InputBase
+          placeholder="Search…"
+          sx={{
+            '& .MuiInputBase-root': {
+              color: 'inherit',
+              mr: 3
+            },
+            '& .MuiInputBase-input': {
+              p: theme.spacing(1, 1, 1, 0),
+              pl: `calc(1em + ${theme.spacing(4)})`,
+              transition: theme.transitions.create('width'),
+              color: theme.palette.grey[100],
+              width: { sm: '100%', md: 125 },
+              mr: { md: 3 },
+              '&:focus': {
+                width: { md: 225 }
+              }
+            }
+          }}
+          inputProps={{ 'aria-label': 'search' }}
+        />
+      </Box>
+    </Box>
+  );
 };
 
 export default SearchSection;

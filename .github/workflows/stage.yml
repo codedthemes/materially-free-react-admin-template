@@ -1,0 +1,39 @@
+name: Node - SSH deploy
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches:
+      - stage
+
+jobs:
+  SFTP-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '18'
+
+      - name: 🔨 Build Project
+        run: |
+          npm install --legacy-peer-deps
+          npm run build-stage
+
+      - name: 📂 Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          # ARGS: "-rltgoDzvO --delete"
+          SOURCE: 'build/'
+          REMOTE_HOST: 217.21.92.35
+          REMOTE_USER: u778408432
+          REMOTE_PORT: '65002'
+          TARGET: domains/codedthemes.com/public_html/demos/admin-templates/materially/react/free/stage
+          EXCLUDE: '/dist/, /node_modules/'
