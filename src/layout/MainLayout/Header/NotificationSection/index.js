@@ -151,7 +151,7 @@ const NotificationSection = () => {
                         primary={<Typography variant="subtitle1">Joseph William</Typography>}
                         secondary={<Typography variant="subtitle2">Purchase a new product</Typography>}
                       />
-                      <ListItemSecondaryAction sx={{ top: 22 }}>
+                      <ListItemSecondaryAction sx={{ top: 20 }}>
                         <Grid container justifyContent="flex-end">
                           <Grid item>
                             <QueryBuilderTwoToneIcon
@@ -178,7 +178,7 @@ const NotificationSection = () => {
                         primary={<Typography variant="subtitle1">Sara Soudein</Typography>}
                         secondary={<Typography variant="subtitle2">Currently Login</Typography>}
                       />
-                      <ListItemSecondaryAction sx={{ top: 22 }}>
+                      <ListItemSecondaryAction sx={{ top: 30 }}>
                         <Grid container justifyContent="flex-end">
                           <Grid item>
                             <QueryBuilderTwoToneIcon
@@ -205,7 +205,7 @@ const NotificationSection = () => {
                         primary={<Typography variant="subtitle1">Sepha Wilon</Typography>}
                         secondary={<Typography variant="subtitle2">Purchase a new product</Typography>}
                       />
-                      <ListItemSecondaryAction sx={{ top: 22 }}>
+                      <ListItemSecondaryAction sx={{ top: 30 }}>
                         <Grid container justifyContent="flex-end">
                           <Grid item>
                             <QueryBuilderTwoToneIcon
