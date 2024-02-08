@@ -15,14 +15,14 @@ Materially Logo is inspired from the insect name - 'Materially' as they have tri
 
 The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as TypeScript, apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
 
-| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default)                                         |
-| ---------------------------------------------- | :------------------------------------------------------------------------------- |
-| **7** Demo pages                               | **85+** Demo pages                                                               |
-| -                                              | ✓ Dark/Light Mode 🌓                                                             |
-| -                                              | ✓ RTL                                                                            |
-| -                                              | ✓ JWT, Firebase, Auth0, AWS authentication                                       |
-| -                                              | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion) |
-| ✓ MIT License                                  | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)                                  |
+| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default)                                                                           |
+| --------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **7** Demo pages                                                                        | **85+** Demo pages                                                                                                                                                 |
+| -                                                                                       | ✓ Dark/Light Mode 🌓                                                                                                                                               |
+| -                                                                                       | ✓ RTL                                                                                                                                                              |
+| -                                                                                       | ✓ JWT, Firebase, Auth0, AWS authentication                                                                                                                         |
+| -                                                                                       | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion)                                                        |
+| ✓ MIT License                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium) |
 
 ## Why Materially?
 
@@ -54,7 +54,7 @@ Materially offers everything needed to build an advanced dashboard application. 
 
 #### Purchase
 
-- [Buy now](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
+- [Buy now](https://codedthemes.com/item/materially-reactjs-admin-dashboard/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
 
 ## Table of contents
 
@@ -113,7 +113,7 @@ Please generate a [GitHub issue](https://github.com/codedthemes/materially-free-
 
 ## License
 
-- Licensed under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+- Licensed under [MIT](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)
 
 ## More Free React Material Admin Dashboard Templates
 
@@ -127,7 +127,7 @@ Please generate a [GitHub issue](https://github.com/codedthemes/materially-free-
 
 ## Follow us
 
-- Website [https://codedthemes.com/demos/admin-templates/materially/react/](https://codedthemes.com/demos/admin-templates/materially/react/)
+- Website [https://codedthemes.com/demos/admin-templates/materially/react/default/](https://codedthemes.com/demos/admin-templates/materially/react/default/)
 - Blog [https://blog.codedthemes.com/](https://blog.codedthemes.com/)
 - CodedThemes [https://codedthemes.com](https://codedthemes.com)
 - Dribbble [https://dribbble.com/codedthemes](https://dribbble.com/codedthemes)
