@@ -11,6 +11,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 // project import
 import MenuList from './MenuList';
 import { drawerWidth } from 'config.js';
+import NavCard from './MenuList/NavCard';
 
 // assets
 import logo from 'assets/images/logo.svg';
@@ -53,6 +54,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
       <Divider />
       <PerfectScrollbar style={{ height: 'calc(100vh - 65px)', padding: '10px' }}>
         <MenuList />
+        <NavCard />
       </PerfectScrollbar>
     </>
   );
