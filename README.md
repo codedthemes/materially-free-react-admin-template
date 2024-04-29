@@ -13,7 +13,7 @@ Materially Logo is inspired from the insect name - 'Materially' as they have tri
 
 ![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-REACT-REPO%20-%20Materially.jpg)
 
-The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as TypeScript, apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
+The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as mutliple apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
 
 | [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default)                                                                           |
 | --------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
