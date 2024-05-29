@@ -5,12 +5,12 @@ import { useTheme, styled } from '@mui/material/styles';
 import { Grid, Card, CardHeader, CardContent, Typography, Divider, LinearProgress } from '@mui/material';
 
 //project import
-import SalesLineCard from './SalesLineCard';
-import SalesLineCardData from './chart/sale-chart-1';
-
-import RevenuChartCard from './RevenuChartCard';
-import RevenuChartCardData from './chart/revenu-chart';
+import SalesLineCard from 'views/Dashboard/card/SalesLineCard';
+import SalesLineCardData from 'views/Dashboard/card/sale-chart-1';
+import RevenuChartCard from 'views/Dashboard/card/RevenuChartCard';
+import RevenuChartCardData from 'views/Dashboard/card/revenu-chart';
 import ReportCard from './ReportCard';
+
 import { gridSpacing } from 'config.js';
 
 // assets

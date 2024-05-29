@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -15,12 +14,10 @@ import {
   InputLabel,
   OutlinedInput,
   InputAdornment,
-  IconButton,
-  FormControlLabel,
-  Checkbox
+  IconButton
 } from '@mui/material';
 
-// third party
+//  third party
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 
@@ -29,12 +26,11 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Google from 'assets/images/social-google.svg';
 
-// ==============================|| FIREBASE REGISTER ||============================== //
+// ==============================|| FIREBASE LOGIN ||============================== //
 
-const FirebaseRegister = ({ ...rest }) => {
+const AuthLogin = ({ ...rest }) => {
   const theme = useTheme();
   const [showPassword, setShowPassword] = React.useState(false);
-  const [checked, setChecked] = React.useState(false);
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -69,12 +65,12 @@ const FirebaseRegister = ({ ...rest }) => {
               width="20px"
               style={{
                 marginRight: '16px',
-                '@media (maxWidth:900px)': {
+                '@media (maxWidth:899.95px)': {
                   marginRight: '8px'
                 }
               }}
             />{' '}
-            Register with Google
+            Sign in with Google
           </Button>
         </Grid>
       </Grid>
@@ -89,8 +85,8 @@ const FirebaseRegister = ({ ...rest }) => {
 
       <Formik
         initialValues={{
-          email: 'admin@phoenixcoded.net',
-          password: 'aA123456',
+          email: '',
+          password: '',
           submit: null
         }}
         validationSchema={Yup.object().shape({
@@ -114,12 +110,7 @@ const FirebaseRegister = ({ ...rest }) => {
               variant="outlined"
             />
 
-            <FormControl
-              fullWidth
-              error={Boolean(touched.password && errors.password)}
-              sx={{ mt: theme.spacing(3), mb: theme.spacing(1) }}
-              variant="outlined"
-            >
+            <FormControl fullWidth error={Boolean(touched.password && errors.password)} sx={{ mt: theme.spacing(3), mb: theme.spacing(1) }}>
               <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
               <OutlinedInput
                 id="outlined-adornment-password"
@@ -150,28 +141,23 @@ const FirebaseRegister = ({ ...rest }) => {
                 </FormHelperText>
               )}
             </FormControl>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Typography variant="subtitle2" color="primary" sx={{ textDecoration: 'none' }}>
+                  Forgot Password?
+                </Typography>
+              </Grid>
+            </Grid>
 
             {errors.submit && (
               <Box mt={3}>
                 <FormHelperText error>{errors.submit}</FormHelperText>
               </Box>
             )}
-            <Box my={0}>
-              <FormControlLabel
-                control={
-                  <Checkbox checked={checked} onChange={(event) => setChecked(event.target.checked)} name="checked" color="primary" />
-                }
-                label={
-                  <>
-                    I have read the &nbsp;
-                    <Link to="#">Terms and Conditions </Link>
-                  </>
-                }
-              />
-            </Box>
+
             <Box mt={2}>
               <Button color="primary" disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained">
-                Register
+                Log In
               </Button>
             </Box>
           </form>
@@ -181,4 +167,4 @@ const FirebaseRegister = ({ ...rest }) => {
   );
 };
 
-export default FirebaseRegister;
+export default AuthLogin;

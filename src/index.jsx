@@ -22,7 +22,7 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>
+    <BrowserRouter basename={import.meta.env.VITE_APP_BASE_NAME}>
       <App />
     </BrowserRouter>
   </Provider>

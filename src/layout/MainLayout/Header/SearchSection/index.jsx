@@ -45,7 +45,7 @@ const SearchSection = () => {
               <Popper
                 {...bindPopper(popupState)}
                 transition
-                sx={{ zIndex: 1100, width: '100%', top: '10px !important', p: 0 }}
+                sx={{ zIndex: 1201, width: '100%', top: '10px !important', p: 0 }}
                 modifiers={[
                   {
                     name: 'offset',

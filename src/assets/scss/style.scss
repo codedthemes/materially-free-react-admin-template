@@ -1,7 +1,11 @@
-@import 'themes-vars';
+@import 'themes-vars.module.scss';
 @import 'plugins/plugins';
 
 /* breadcrumb */
+.icon-breadcrumb {
+  margin-right: 5px;
+}
+
 .link-breadcrumb {
   font-size: 0.75rem;
   display: flex;
@@ -17,4 +21,22 @@
 
 .apexcharts-legend-marker {
   margin-right: 8px !important;
+}
+
+.f-right {
+  float: right;
+}
+.p-0 {
+  padding: 0 !important;
+}
+.p-20 {
+  padding: 20px !important;
+}
+
+.apexcharts-legend-text {
+  padding-right: 4px;
+}
+
+.css-7blk3r-MuiButtonBase-root-MuiButton-root {
+  color: $textDarkDark !important;
 }

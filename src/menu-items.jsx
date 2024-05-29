@@ -21,6 +21,8 @@ const icons = {
   ContactSupportOutlinedIcon: ContactSupportOutlinedIcon
 };
 
+// ==============================|| MENU ITEMS ||============================== //
+
 // eslint-disable-next-line
 export default {
   items: [

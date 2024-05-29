@@ -12,6 +12,7 @@ import Chart from 'react-apexcharts';
 
 const SalesLineCard = ({ bgColor, chartData, footerData, icon, title, percentage }) => {
   const theme = useTheme();
+
   let footerHtml;
 
   if (footerData) {
@@ -34,12 +35,12 @@ const SalesLineCard = ({ bgColor, chartData, footerData, icon, title, percentage
   return (
     <Card>
       <CardContent sx={{ padding: 0, paddingBottom: '0 !important' }}>
-        <Box color="#fff" bgcolor={bgColor ? bgColor : theme.palette.primary.main} p={3}>
+        <Box bgcolor={bgColor ? bgColor : theme.palette.primary.main} p={3}>
           <Grid container direction="column" spacing={1}>
             <Grid item container justifyContent="space-between" alignItems="center">
               {title && (
                 <Grid item>
-                  <Typography variant="subtitle1" color="inherit">
+                  <Typography variant="subtitle1" color="#fff">
                     {title}
                   </Typography>
                 </Grid>
@@ -47,12 +48,12 @@ const SalesLineCard = ({ bgColor, chartData, footerData, icon, title, percentage
               <Grid item>
                 <Grid container alignItems="center">
                   {icon && (
-                    <Box component="span" mr={2}>
+                    <Box component="span" mr={2} color="#fff">
                       {icon}
                     </Box>
                   )}
                   {percentage && (
-                    <Typography variant="subtitle1" color="inherit">
+                    <Typography variant="subtitle1" color="#fff">
                       {percentage}
                     </Typography>
                   )}
