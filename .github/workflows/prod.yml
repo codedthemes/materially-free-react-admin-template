@@ -16,15 +16,15 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
 
-      - name: Use Node.js 18
+      - name: Use Node.js 20
         uses: actions/setup-node@v2-beta
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: 🔨 Build Project
         run: |
-          npm install --legacy-peer-deps
-          npm run build
+          yarn
+          yarn build
 
       - name: 📂 Deploy to Server
         uses: easingthemes/ssh-deploy@v2.1.5
