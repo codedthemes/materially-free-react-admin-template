@@ -36,7 +36,7 @@ const OutletDiv = styled((props) => <div {...props} />)(({ theme }) => ({
 
 const MainLayout = () => {
   const theme = useTheme();
-  const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
+  const matchUpLg = useMediaQuery(theme.breakpoints.up('lg'));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -44,8 +44,8 @@ const MainLayout = () => {
   };
 
   React.useEffect(() => {
-    setDrawerOpen(matchUpMd);
-  }, [matchUpMd]);
+    setDrawerOpen(matchUpLg);
+  }, [matchUpLg]);
 
   return (
     <Box sx={{ display: 'flex', width: '100%' }}>

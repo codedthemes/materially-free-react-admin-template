@@ -21,7 +21,7 @@ const chartData = {
       max: 100
     },
     tooltip: {
-      theme: 'dark',
+      theme: 'light',
       fixed: {
         enabled: false
       },

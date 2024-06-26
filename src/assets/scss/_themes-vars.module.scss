@@ -25,6 +25,8 @@ $successDark: #007849;
 $successLight: #33bc87;
 
 $grey300: #425466;
+$dark: #343a40;
+
 $bg100: #f8f8f9;
 
 // Text Colors
@@ -33,8 +35,15 @@ $textSecondary: #1b212c;
 $textDark: #12171e;
 $textHint: #00000061;
 
+// Text Dark Color
+$textDarkPrimary: #bbc0c7;
+$textDarkSecondary: #babfc9;
+$textDarkDark: #fff;
+$texDarkHint: #94919161;
+
 // Background Color
-$backgound: #f0f2f8;
+$background: #f0f2f8;
+$backgoundDark: #181e2b;
 
 // Paper Color
 $paper: #ffffff;
@@ -70,6 +79,7 @@ $menuHover: #e3f2fd;
   successLight: $successLight;
 
   grey300: $grey300;
+
   bg100: $bg100;
 
   // Text Colors
@@ -78,8 +88,15 @@ $menuHover: #e3f2fd;
   textDark: $textDark;
   textHint: $textHint;
 
+  // Text Dark Colors
+  textDarkPrimary: $textDarkPrimary;
+  textDarkSecondary: $textDarkSecondary;
+  textDarkDark: $textDarkDark;
+  textDarkHint: $texDarkHint;
+
   // Background Color
-  backgound: $backgound;
+  background: $background;
+  backgoundDark: $backgoundDark;
 
   // Paper Color
   paper: $paper;

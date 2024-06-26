@@ -1,13 +1,12 @@
 // material-ui
 import { createTheme } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
 
 // project import
-import value from '../assets/scss/_themes-vars.scss';
+import value from 'assets/scss/_themes-vars.module.scss';
 
 // ==============================|| THEME ||============================== //
 
-export function theme() {
+export function theme(customization) {
   let textPrimary;
   let textSecondary;
   let textDark;
@@ -17,15 +16,28 @@ export function theme() {
   let menuCaption;
   let textInversePrimary;
 
-  textPrimary = textInversePrimary = menuCaption = value.textPrimary;
-  textSecondary = value.textSecondary;
-  textDark = value.textDark;
-  textHint = value.textHint;
-
-  background = value.backgound;
-  paper = value.paper;
+  switch (customization.navType) {
+    case 'light':
+    default:
+      textPrimary = textInversePrimary = menuCaption = value.textPrimary;
+      textSecondary = value.textSecondary;
+      textDark = value.textDark;
+      textHint = value.textHint;
+      background = value.background;
+      paper = value.paper;
+      break;
+  }
 
   return createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 768,
+        md: 1024,
+        lg: 1266,
+        xl: 1440
+      }
+    },
     direction: 'ltr',
     palette: {
       mode: 'light',
@@ -154,18 +166,6 @@ export function theme() {
         fontWeight: 400,
         color: menuCaption,
         textTransform: 'capitalize'
-      },
-      subHeading: {
-        color: 'red'
-      },
-      cardTitle: {
-        color: value.primary,
-        fontSize: '1rem'
-      },
-      breadcrumbTitle: {
-        fontWeight: 500,
-        fontSize: '1.5rem',
-        color: textDark
       }
     },
     components: {
@@ -197,21 +197,21 @@ export function theme() {
             paddingBottom: '12px',
             '&.Mui-selected': {
               '& .MuiListItemIcon-root': {
-                color: value.primary
+                color: customization.navType === 'dark' ? value.menuHover : value.primary
               },
-              color: value.primary,
-              backgroundColor: value.menuHover
+              color: customization.navType === 'dark' ? value.menuHover : value.primary,
+              backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary
             },
             '&:hover': {
-              backgroundColor: value.menuHover,
-              color: value.primary,
+              backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary,
+              color: customization.navType === 'dark' ? value.menuHover : value.primary,
               '& .MuiListItemIcon-root': {
-                color: value.primary
+                color: customization.navType === 'dark' ? value.menuHover : value.primary
               }
             },
             button: {
               '&:hover': {
-                backgroundColor: value.menuHover
+                backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary
               }
             }
           }
@@ -225,21 +225,21 @@ export function theme() {
             paddingBottom: '12px',
             '&.Mui-selected': {
               '& .MuiListItemIcon-root': {
-                color: value.primary
+                color: customization.navType === 'dark' ? value.menuHover : value.primary
               },
-              color: value.primary,
-              backgroundColor: value.menuHover
+              color: customization.navType === 'dark' ? value.menuHover : value.primary,
+              backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary
             },
             '&:hover': {
-              backgroundColor: value.menuHover,
-              color: value.primary,
+              backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary,
+              color: customization.navType === 'dark' ? value.menuHover : value.primary,
               '& .MuiListItemIcon-root': {
-                color: value.primary
+                color: customization.navType === 'dark' ? value.menuHover : value.primary
               }
             },
             button: {
               '&:hover': {
-                backgroundColor: value.menuHover
+                backgroundColor: customization.navType !== 'dark' ? value.menuHover : value.primary
               }
             }
           }
@@ -301,113 +301,6 @@ export function theme() {
         styleOverrides: {
           root: {
             padding: '24px'
-          }
-        }
-      },
-      // Table
-      MuiTableCell: {
-        styleOverrides: {
-          root: {
-            padding: '16px 36px 16px 36px',
-            whiteSpace: 'normal'
-          },
-          head: {
-            padding: '16px 36px 16px 36px',
-            color: textDark,
-            fontWeight: 600
-          },
-          paddingCheckbox: {
-            paddingLeft: '18px',
-            position: 'relative'
-          }
-        }
-      },
-      MUIDataTableSelectCell: {
-        styleOverrides: {
-          fixedLeft: {
-            position: 'unset'
-          }
-        }
-      },
-      MuiTableHead: {
-        styleOverrides: {
-          root: {
-            background: background
-          },
-          MuiChip: {
-            root: {
-              backgroundColor: value.secondary
-            }
-          }
-        }
-      },
-      MuiChip: {
-        styleOverrides: {
-          colorDefault: {
-            color: grey[100],
-            backgroundColor: value.secondary
-          },
-          colorSecondary: {
-            color: grey[100]
-          },
-          colorPrimary: {
-            color: grey[100]
-          },
-          root: {
-            color: grey[100]
-          },
-          outlined: {
-            color: grey[500]
-          },
-          deleteIcon: {
-            color: grey[500]
-          }
-        }
-      },
-      MuiTimelineDot: {
-        styleOverrides: {
-          filledGrey: {
-            background: grey[300]
-          }
-        }
-      },
-      MuiCheckbox: {
-        styleOverrides: {
-          root: {
-            color: value.textSecondary
-          },
-          indeterminate: {
-            color: value.textPrimary
-          }
-        }
-      },
-      MuiTimelineConnector: {
-        styleOverrides: {
-          root: {
-            background: grey[300]
-          }
-        }
-      },
-      MuiTableContainer: {
-        styleOverrides: {
-          root: {
-            boxShadow: 'none',
-            maxWidth: '100%'
-          }
-        }
-      },
-      MuiAvatar: {
-        styleOverrides: {
-          colorDefault: {
-            backgroundColor: value.textHint,
-            color: grey[100]
-          }
-        }
-      },
-      MuiInputBase: {
-        styleOverrides: {
-          input: {
-            color: textDark
           }
         }
       }

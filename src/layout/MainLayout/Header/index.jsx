@@ -22,7 +22,7 @@ const Header = ({ drawerToggle }) => {
 
   return (
     <>
-      <Box width={drawerWidth}>
+      <Box width={drawerWidth} sx={{ zIndex: 1201 }}>
         <Grid container justifyContent="space-between" alignItems="center">
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <Grid item>

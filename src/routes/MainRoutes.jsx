@@ -4,11 +4,9 @@ import React, { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'component/Loadable';
 
-const DashboardDefault = Loadable(lazy(() => import('../views/Dashboard')));
-
-const UtilsTypography = Loadable(lazy(() => import('../views/Utils/Typography')));
-
-const SamplePage = Loadable(lazy(() => import('../views/SamplePage')));
+const DashboardDefault = Loadable(lazy(() => import('views/Dashboard/Default')));
+const UtilsTypography = Loadable(lazy(() => import('views/Utils/Typography')));
+const SamplePage = Loadable(lazy(() => import('views/SamplePage')));
 
 // ==============================|| MAIN ROUTES ||============================== //
 
