@@ -6,15 +6,14 @@ import { useTheme } from '@mui/material/styles';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 
 // project import
-import FirebaseRegister from './FirebaseRegister';
-import { Link } from 'react-router-dom';
+import AuthLogin from './AuthLogin';
 
 // assets
 import Logo from 'assets/images/logo-dark.svg';
 
-// ==============================|| REGISTER ||============================== //
+// ==============================|| LOGIN ||============================== //
 
-const Register = () => {
+const Login = () => {
   const theme = useTheme();
 
   return (
@@ -24,20 +23,19 @@ const Register = () => {
       alignItems="center"
       sx={{ backgroundColor: theme.palette.common.black, height: '100%', minHeight: '100vh' }}
     >
-      <Grid item xs={11} md={6} lg={4}>
+      <Grid item xs={11} sm={7} md={6} lg={4}>
         <Card
           sx={{
             overflow: 'visible',
             display: 'flex',
             position: 'relative',
-            my: 3,
-            mx: 'auto',
             '& .MuiCardContent-root': {
               flexGrow: 1,
               flexBasis: '50%',
               width: '50%'
             },
-            maxWidth: 475
+            maxWidth: '475px',
+            margin: '24px auto'
           }}
         >
           <CardContent sx={{ p: theme.spacing(5, 4, 3, 4) }}>
@@ -46,7 +44,7 @@ const Register = () => {
                 <Grid container justifyContent="space-between">
                   <Grid item>
                     <Typography color="textPrimary" gutterBottom variant="h2">
-                      Register
+                      Sign in
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       To keep connected with us.
@@ -60,12 +58,18 @@ const Register = () => {
                 </Grid>
               </Grid>
               <Grid item xs={12}>
-                <FirebaseRegister />
+                <AuthLogin />
               </Grid>
               <Grid container justifyContent="flex-start" sx={{ mt: theme.spacing(2), mb: theme.spacing(1) }}>
                 <Grid item>
-                  <Typography variant="subtitle2" color="secondary" component={Link} to="/login" sx={{ textDecoration: 'none', pl: 2 }}>
-                    Having an account
+                  <Typography
+                    variant="subtitle2"
+                    color="secondary"
+                    component={RouterLink}
+                    to="/application/register"
+                    sx={{ textDecoration: 'none', pl: 2 }}
+                  >
+                    Create new account
                   </Typography>
                 </Grid>
               </Grid>
@@ -77,4 +81,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

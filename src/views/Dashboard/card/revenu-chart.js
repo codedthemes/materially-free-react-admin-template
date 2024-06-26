@@ -1,4 +1,4 @@
-import value from 'assets/scss/_themes-vars.scss';
+import value from 'assets/scss/_themes-vars.module.scss';
 // eslint-disable-next-line
 export default {
   height: 228,
@@ -6,6 +6,10 @@ export default {
   options: {
     dataLabels: {
       enabled: false
+    },
+    yaxis: {
+      min: 0,
+      max: 100
     },
     labels: ['Youtube', 'Facebook', 'Twitter'],
     legend: {

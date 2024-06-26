@@ -113,7 +113,7 @@ const NotificationSection = () => {
                     <ListSubheader disableSticky>
                       <Chip size="small" color="primary" label="New" />
                     </ListSubheader>
-                    <ListItemButton alignItemsFlexStart sx={{ pt: 0 }}>
+                    <ListItemButton alignItems="flex-start" sx={{ pt: 0 }}>
                       <ListItemAvatar>
                         <Avatar alt="John Doe" src={User1} />
                       </ListItemAvatar>
@@ -143,7 +143,7 @@ const NotificationSection = () => {
                     <ListSubheader disableSticky>
                       <Chip size="small" variant="outlined" label="EARLIER" />
                     </ListSubheader>
-                    <ListItemButton alignItemsFlexStart sx={{ pt: 0 }}>
+                    <ListItemButton alignItems="flex-start" sx={{ pt: 0 }}>
                       <ListItemAvatar>
                         <Avatar alt="Joseph William" src={User2} />
                       </ListItemAvatar>
@@ -170,7 +170,7 @@ const NotificationSection = () => {
                         </Grid>
                       </ListItemSecondaryAction>
                     </ListItemButton>
-                    <ListItemButton alignItemsFlexStart>
+                    <ListItemButton alignItems="flex-start">
                       <ListItemAvatar>
                         <Avatar alt="Sara Soudein" src={User3} />
                       </ListItemAvatar>
@@ -197,7 +197,7 @@ const NotificationSection = () => {
                         </Grid>
                       </ListItemSecondaryAction>
                     </ListItemButton>
-                    <ListItemButton alignItemsFlexStart>
+                    <ListItemButton alignItems="flex-start">
                       <ListItemAvatar>
                         <Avatar alt="Sepha Wilon" src={User4} />
                       </ListItemAvatar>
