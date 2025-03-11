@@ -82,9 +82,9 @@ The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react
 | -                                                                                            | ✓ Multi-Dashboard                                                                                                                                                     |
 | -                                                                                            | ✓ Dark/Light Mode 🌓                                                                                                                                                  |
 | -                                                                                            | ✓ RTL                                                                                                                                                                 |
-| -                                                                                      | ✓ JWT, Firebase, Auth0, AWS authentication                                                                                                                                                           |
+| -                                                                                      | ✓ JWT, Firebase, Auth0 authentication                                                                                                                                                           |
 | -                                                                                       | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion)                                                        |
-| ✓ MIT License                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/) |
+| ✓ [MIT License](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/) |
 
 
 ## Documentation
