@@ -2,75 +2,38 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/materially-free-react-admin-template)](https://github.com/codedthemes/materially-free-react-admin-template/)
+[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)
+[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=flat-square&logo=github)](https://codedthemes.com/item/materially-free-reactjs-admin-template/)
+[![Join Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/p2E2WhCb6s)
 
 Materially is a free and open source React redux dashboard template made using the Material UI React component library with aim of flexibility and better customizability.
 
-### Name Derived From Nature
-
-Materially Logo is inspired from the insect name - 'Materially' as they have triangular heads with flexible Necks.
-
-:star: :star: :star: Support us by giving star (Top right of this page) if you like the theme :star: :star: :star:
+✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine
 
 ![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-REACT-REPO%20-%20Materially.jpg)
 
-The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as mutliple apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
-
-| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default)                                                                           |
-| --------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **7** Demo pages                                                                        | **85+** Demo pages                                                                                                                                                 |
-| -                                                                                       | ✓ Dark/Light Mode 🌓                                                                                                                                               |
-| -                                                                                       | ✓ RTL                                                                                                                                                              |
-| -                                                                                       | ✓ JWT, Firebase, Auth0, AWS authentication                                                                                                                         |
-| -                                                                                       | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion)                                                        |
-| ✓ MIT License                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium) |
-
-## Why Materially?
-
-Materially offers everything needed to build an advanced dashboard application. In the initial release, we included following high-end features,
-
-- Support React18.
-- Professional user interface.
-- Material UI React components.
-- Fully responsive, all modern browser supported.
-- Easy to use code structure
-- Flexible & high-Performance code
-- Simple documentation
-
-## Free Materially React version
-
-#### Preview
-
-- [Demo](https://codedthemes.com/demos/admin-templates/materially/react/free/)
-
-#### Download
-
-- [Download from GitHub](https://github.com/codedthemes/materially-free-react-admin-template)
-
-## Materially Pro version
-
-#### Preview
-
-- [Demo](https://codedthemes.com/demos/admin-templates/materially/react/default)
-
-#### Purchase
-
-- [Buy now](https://codedthemes.com/item/materially-reactjs-admin-dashboard/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
 
 ## Table of contents
 
-- [Getting started](#getting-started)
+- [Getting Started](#getting-started)
+- [Download](#download)
+- [Why Materially?](#why-materially)
+- [What's included in Premium Version?](#whats-included-in-premium-version)
 - [Documentation](#documentation)
-- [Technology stack](#technology-stack)
-- [Author](#author)
+- [Browser support](#browser-support)
+- [Technology Stack](#technology-stack)
+- 💰[Save more with Big Bundle](#save-more-with-big-bundle)💰
+- [More React Dashboard Templates](#more-react-dashboard-templates)
 - [Issues?](#issues)
 - [License](#license)
-- [More Free React Templates](#more-free-react-material-admin-dashboard-templates)
-- [More Pro React Templates](#more-premium-react-material-admin-dashboard-templates)
+- [Contributor](#contributor)
+- [Useful Resources](#useful-resources)
+- [Community](#community)
 - [Follow us](#follow-us)
 
 ## Getting Started
 
-1. Clone from Github
+11. Clone from Github
 
 ```
 git clone https://github.com/codedthemes/materially-free-react-admin-template.git
@@ -88,48 +51,119 @@ yarn
 yarn start
 ```
 
+## Download
+
+- Materially Free
+  - [Live Preview](https://codedthemes.com/demos/admin-templates/materially/react/free/)
+  - [Download](https://github.com/codedthemes/materially-free-react-admin-template)
+- Materially Pro
+  - [Live Preview](https://codedthemes.com/demos/admin-templates/materially/react/default)
+  - [Download](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
+
+## Why Materially?
+
+Materially offers everything needed to build an advanced dashboard application. In the initial release, we included following high-end features,
+
+- Support React18.
+- Professional user interface.
+- Material UI React components.
+- Fully responsive, all modern browser supported.
+- Easy to use code structure
+- Flexible & high-Performance code
+- Simple documentation
+
+## What's included in Premium Version?
+
+The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as mutliple apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
+
+| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default) |
+| -------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **5** Demo pages                                                                             | **100+** Demo pages                                                                                                                                                    |
+| -                                                                                            | ✓ Multi-Dashboard                                                                                                                                                     |
+| -                                                                                            | ✓ Dark/Light Mode 🌓                                                                                                                                                  |
+| -                                                                                            | ✓ RTL                                                                                                                                                                 |
+| -                                                                                      | ✓ JWT, Firebase, Auth0 authentication                                                                                                                                                           |
+| -                                                                                       | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion)                                                        |
+| ✓ [MIT License](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/) |
+
+
 ## Documentation
 
-[Materially documentation](https://codedthemes.gitbook.io/materially-react-material-documentation/) helps you out in all aspects from Installation to deployment.
+[Materially React documentation](https://codedthemes.gitbook.io/materially-react-material-documentation/) helps you out in all aspects from Installation to deployment.
 
-## Technology stack
+## Browser support
 
-- [Material UI V5](https://mui.com/core/)
-- Built with React Hooks API.
-- Redux & React context API for state management.
-- Redux toolkit.
-- React Router for navigation routing.
-- Support for vite.
-- Code splitting.
-- CSS-in-JS.
+<img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" height="45" >
 
-## Author
+## Technology Stack
 
-Materially is managed by team [CodedThemes](https://codedthemes.com).
+- React (18.x)
+- Material UI (5.x)
+- SASS with JSS Powered
+- Vite
+- Redux toolkit
+- React Router 
+- Firebase
+- Auth0
+- JWT
+- Localization
+
+## Save more with Big Bundle
+
+[![bundle-image](https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Bundle+banner.png)](https://links.codedthemes.com/jhFBJ)
+
+## More React Dashboard Templates
+
+| Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Berry%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">   | [**Free**](https://codedthemes.com/item/berry-mui-free-react-admin-template/)       | [**Pro**](https://codedthemes.com/item/berry-material-react-admin-template/)</span>   |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">    | [**Free**](https://codedthemes.com/item/mantis-free-mui-admin-template/)      | [**Pro**](https://codedthemes.com/item/mantis-mui-react-dashboard-template/)</span>       |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/) | [**Pro**](https://codedthemes.com/item/datta-able-react-admin-template/)</span> |
 
 ## Issues
 
-Please generate a [GitHub issue](https://github.com/codedthemes/materially-free-react-admin-template/issues) if you found a bug in any version. We are try our best to resolve the issue.
+If you found a bug in any version, please generate a [GitHub issue](https://github.com/codedthemes/materially-free-react-admin-template/issues). We are trying our best to resolve the issue.
 
 ## License
 
 - Licensed under [MIT](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)
+- Copyright © [CodedThemes](https://codedthemes.com/)
 
-## More Free React Material Admin Dashboard Templates
+## Contributor 
 
-- [Free Mantis](https://mui.com/store/items/mantis-free-react-admin-dashboard-template/)
-- [Free Berry](https://mui.com/store/items/berry-react-material-admin-free/)
+**CodedThemes Team**
 
-## More premium React Material Admin Dashboard Templates
+- https://x.com/codedthemes
+- https://github.com/codedthemes
 
-- [Mantis](https://mui.com/store/items/mantis-react-admin-dashboard-template/)
-- [Berry](https://mui.com/store/items/berry-react-material-admin/)
+**Rakesh Nakrani**
 
-## Follow us
+- https://x.com/rakesh_nakrani
 
-- Website [https://codedthemes.com/demos/admin-templates/materially/react/default/](https://codedthemes.com/demos/admin-templates/materially/react/default/)
-- Blog [https://blog.codedthemes.com/](https://blog.codedthemes.com/)
-- CodedThemes [https://codedthemes.com](https://codedthemes.com)
-- Dribbble [https://dribbble.com/codedthemes](https://dribbble.com/codedthemes)
-- Facebook [https://www.facebook.com/codedthemes](https://www.facebook.com/codedthemes)
-- Twitter [https://twitter.com/codedthemes](https://twitter.com/codedthemes)
+**Brijesh Dobariya**
+
+- https://x.com/dobaria_brijesh
+
+## Useful Resources
+
+- [More Admin Templates From CodedThemes](https://codedthemes.com/item/category/admin-templates/)
+- [Freebies From CodedThemes](https://codedthemes.com/item/category/free-templates/)
+- [Big Bundles](https://codedthemes.com/item/big-bundle/)
+- [Figma UI Kits](https://codedthemes.com/item/category/templates/figma/)
+- [Affiliate Program](https://codedthemes.com/affiliate/)
+- [Blogs](https://blog.codedthemes.com/)
+
+## Community
+
+- 👥Follow [@codedthemes](https://x.com/codedthemes)
+- 🔗Join [Discord](https://discord.com/invite/p2E2WhCb6s)
+- 🔔Subscribe to [Codedtheme Blogs](https://blog.codedthemes.com/)
+
+## Follow Us
+
+- [Twitter](https://twitter.com/codedthemes) 🐦
+- [Dribbble](https://dribbble.com/codedthemes) 🏀
+- [Github](https://github.com/codedthemes) 🐙
+- [LinkedIn](https://www.linkedin.com/company/codedthemes/) 💼
+- [Instagram](https://www.instagram.com/codedthemes/) 📷
+- [Facebook](https://www.facebook.com/codedthemes) 🟦
