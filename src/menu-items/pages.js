@@ -30,7 +30,7 @@ const pages = {
   children: [
     {
       id: 'sample-page',
-      title: 'sample-page',
+      title: 'Sample Page',
       type: 'item',
       url: '/sample-page',
       icon: icons.ChromeReaderModeOutlinedIcon
@@ -59,7 +59,7 @@ const pages = {
     },
     {
       id: 'documentation',
-      title: 'documentation',
+      title: 'Documentation',
       type: 'item',
       url: 'https://codedthemes.gitbook.io/materially-react-material-documentation/',
       icon: icons.HelpOutlineOutlinedIcon,

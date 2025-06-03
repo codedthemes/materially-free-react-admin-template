@@ -12,7 +12,7 @@ const other = {
   children: [
     {
       id: 'disabled-menu',
-      title: 'disabled-menu',
+      title: 'Disabled Menu',
       type: 'item',
       icon: BlockOutlinedIcon,
       disabled: true

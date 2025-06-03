@@ -1,6 +1,7 @@
 // assets
 import HardwareOutlinedIcon from '@mui/icons-material/HardwareOutlined';
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
+import FontDownloadIcon from '@mui/icons-material/FontDownload';
 
 // ==============================|| MENU ITEMS - UI COMPONENT ||============================== //
 
@@ -17,13 +18,14 @@ const uiComponent = {
       url: 'https://mui.com/material-ui/material-icons/',
       icon: AppsOutlinedIcon,
       external: true,
-      target: true
+      target: '_blank'
     },
     {
       id: 'typography',
-      title: 'typography',
+      title: 'Typography',
       type: 'item',
-      url: '/components/typography'
+      url: '/components/typography',
+      icon: FontDownloadIcon
     }
   ]
 };

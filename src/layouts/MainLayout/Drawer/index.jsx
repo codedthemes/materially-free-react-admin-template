@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 // material-ui
 import { alpha } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 
@@ -10,6 +11,9 @@ import DrawerContent from './DrawerContent';
 
 import { DRAWER_WIDTH } from 'config';
 import { handlerDrawerOpen, useGetMenuMaster } from 'states/menu';
+
+// assets
+import ShoppingCart from '@mui/icons-material/ShoppingCart';
 
 // ==============================|| MAIN LAYOUT - DRAWER ||============================== //
 
@@ -43,6 +47,16 @@ export default function MainDrawer({ window }) {
       >
         <DrawerContent />
       </Drawer>
+      <Button
+        variant="contained"
+        color="error"
+        startIcon={<ShoppingCart />}
+        sx={{ zIndex: 1199, position: 'fixed', bottom: 50, right: 30 }}
+        href="https://codedthemes.com/item/materially-reactjs-admin-dashboard/"
+        target="_blank"
+      >
+        Buy Now
+      </Button>
     </Box>
   );
 }

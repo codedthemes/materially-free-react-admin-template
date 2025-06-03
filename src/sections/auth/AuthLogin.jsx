@@ -4,7 +4,6 @@ import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
 import Button from '@mui/material/Button';
-import CircularProgress from '@mui/material/CircularProgress';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -80,7 +79,7 @@ export default function AuthLogin({ inputSx }) {
               component={RouterLink}
               underline="hover"
               variant="subtitle2"
-              to="/forgot-password"
+              to="#"
               textAlign="right"
               sx={{ '&:hover': { color: 'primary.dark' }, mt: 0.375, whiteSpace: 'nowrap' }}
             >
@@ -90,13 +89,7 @@ export default function AuthLogin({ inputSx }) {
         </Box>
       </Stack>
 
-      <Button
-        type="submit"
-        variant="contained"
-        fullWidth
-        endIcon={<CircularProgress color="secondary" size={16} />}
-        sx={{ minWidth: 120, mt: { xs: 2, sm: 3 }, '& .MuiButton-endIcon': { ml: 1 } }}
-      >
+      <Button type="submit" variant="contained" fullWidth sx={{ minWidth: 120, mt: { xs: 2, sm: 3 }, '& .MuiButton-endIcon': { ml: 1 } }}>
         Sign In
       </Button>
     </form>

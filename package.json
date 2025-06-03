@@ -1,7 +1,7 @@
 {
-  "name": "materially-react-mui-js",
-  "private": true,
-  "version": "7.0.0",
+  "name": "materially-free-react-admin-template",
+  "version": "4.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -27,9 +27,7 @@
     "react-device-detect": "2.2.3",
     "react-dom": "19.1.0",
     "react-hook-form": "7.56.4",
-    "react-intl": "7.1.11",
     "react-router-dom": "7.6.0",
-    "react-syntax-highlighter": "15.6.1",
     "simplebar-react": "3.3.1",
     "swr": "2.3.3",
     "vite": "6.3.5",

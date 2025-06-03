@@ -12,7 +12,6 @@ Materially is a free and open source React redux dashboard template made using t
 
 ![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-REACT-REPO%20-%20Materially.jpg)
 
-
 ## Table of contents
 
 - [Getting Started](#getting-started)
@@ -64,7 +63,7 @@ yarn start
 
 Materially offers everything needed to build an advanced dashboard application. In the initial release, we included following high-end features,
 
-- Support React18.
+- Support React 19.
 - Professional user interface.
 - Material UI React components.
 - Fully responsive, all modern browser supported.
@@ -74,22 +73,21 @@ Materially offers everything needed to build an advanced dashboard application. 
 
 ## What's included in Premium Version?
 
-The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as mutliple apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
+The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react/default) of Materially react template includes features such as multiple apps, advance components, form plugins, layouts, widgets, and more.
 
-| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/) | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default) |
-| -------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **5** Demo pages                                                                             | **100+** Demo pages                                                                                                                                                    |
-| -                                                                                            | ✓ Multi-Dashboard                                                                                                                                                     |
-| -                                                                                            | ✓ Dark/Light Mode 🌓                                                                                                                                                  |
-| -                                                                                            | ✓ RTL                                                                                                                                                                 |
-| -                                                                                      | ✓ JWT, Firebase, Auth0 authentication                                                                                                                                                           |
-| -                                                                                       | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/basic/accordion)                                                        |
-| ✓ [MIT License](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)                                                                           | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/) |
-
+| [Materially Free](https://codedthemes.com/demos/admin-templates/materially/react/free/)                | [Materially Pro](https://codedthemes.com/demos/admin-templates/materially/react/default)                         |
+| ------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
+| **5** Demo pages                                                                                       | **100+** Demo pages                                                                                              |
+| -                                                                                                      | ✓ 60+ Components                                                                                                 |
+| -                                                                                                      | ✓ Dark/Light Mode 🌓                                                                                             |
+| -                                                                                                      | ✓ RTL                                                                                                            |
+| -                                                                                                      | ✓ Localization                                                                                                   |
+| -                                                                                                      | ✓ [More components](https://codedthemes.com/demos/admin-templates/materially/react/default/components/accordion) |
+| ✓ [MIT License](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE) | ✓ [Pro License](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)                                |
 
 ## Documentation
 
-[Materially React documentation](https://codedthemes.gitbook.io/materially-react-material-documentation/) helps you out in all aspects from Installation to deployment.
+[Materially React Documentation](https://codedthemes.gitbook.io/materially-react-material-documentation/) helps you out in all aspects from Installation to deployment.
 
 ## Browser support
 
@@ -97,15 +95,12 @@ The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react
 
 ## Technology Stack
 
-- React (18.x)
-- Material UI (5.x)
+- React (19)
+- Material UI (7)
 - SASS with JSS Powered
 - Vite
 - Redux toolkit
-- React Router 
-- Firebase
-- Auth0
-- JWT
+- React Router
 - Localization
 
 ## Save more with Big Bundle
@@ -114,11 +109,11 @@ The [Pro version](https://codedthemes.com/demos/admin-templates/materially/react
 
 ## More React Dashboard Templates
 
-| Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Berry%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">   | [**Free**](https://codedthemes.com/item/berry-mui-free-react-admin-template/)       | [**Pro**](https://codedthemes.com/item/berry-material-react-admin-template/)</span>   |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">    | [**Free**](https://codedthemes.com/item/mantis-free-mui-admin-template/)      | [**Pro**](https://codedthemes.com/item/mantis-mui-react-dashboard-template/)</span>       |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/) | [**Pro**](https://codedthemes.com/item/datta-able-react-admin-template/)</span> |
+| Dashboard                                                                                                                                                        | FREE                                                                           | PRO                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Berry%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/berry-mui-free-react-admin-template/)  | [**Pro**](https://codedthemes.com/item/berry-material-react-admin-template/)</span> |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/mantis-free-mui-admin-template/)       | [**Pro**](https://codedthemes.com/item/mantis-mui-react-dashboard-template/)</span> |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/) | [**Pro**](https://codedthemes.com/item/datta-able-react-admin-template/)</span>     |
 
 ## Issues
 
@@ -129,7 +124,7 @@ If you found a bug in any version, please generate a [GitHub issue](https://gith
 - Licensed under [MIT](https://github.com/codedthemes/materially-free-react-admin-template/blob/main/LICENSE)
 - Copyright © [CodedThemes](https://codedthemes.com/)
 
-## Contributor 
+## Contributor
 
 **CodedThemes Team**
 

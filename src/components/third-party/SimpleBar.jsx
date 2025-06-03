@@ -20,8 +20,7 @@ const SimpleBarStyle = styled(SimpleBar)(({ theme }) => ({
   maxHeight: '100%',
   '& .simplebar-scrollbar': {
     '&:before': {
-      background: alpha(theme.palette.grey[500], 0.48),
-      ...theme.applyStyles('dark', { background: alpha(theme.palette.grey[200], 0.48) })
+      background: alpha(theme.palette.grey[500], 0.48)
     },
     '&.simplebar-visible:before': {
       opacity: 1
@@ -47,7 +46,7 @@ export default function SimpleBarScroll({ children, sx, ...other }) {
   return (
     <>
       <RootStyle>
-        <SimpleBarStyle clickOnTrack={false} sx={sx} data-simplebar-direction={'ltr'} {...other}>
+        <SimpleBarStyle clickOnTrack={false} sx={sx} {...other}>
           {children}
         </SimpleBarStyle>
       </RootStyle>

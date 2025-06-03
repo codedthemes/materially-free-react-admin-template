@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
-import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -15,12 +14,12 @@ import menuItems from 'menu-items';
 //assets
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
-const homeBreadcrumb = { title: 'home', url: APP_DEFAULT_PATH, icon: HomeTwoToneIcon };
+const homeBreadcrumb = { title: 'Home', url: APP_DEFAULT_PATH, icon: HomeTwoToneIcon };
 const flexStyle = { display: 'flex', alignItems: 'center', gap: 0.5 };
 
 // ==============================|| BREADCRUMBS ||============================== //
 
-export default function Breadcrumbs({ data, isCard = false, divider = true, title, icons = false, sx, ...rest }) {
+export default function Breadcrumbs({ data, divider = true, title, icons = false, sx, ...rest }) {
   const location = useLocation();
 
   const [breadcrumbItems, setBreadcrumbItems] = useState([]);
@@ -111,27 +110,22 @@ export default function Breadcrumbs({ data, isCard = false, divider = true, titl
         </MuiBreadcrumbs>
 
         <Typography variant="h3" sx={{ fontWeight: 500, mt: 1 }}>
-          {title}
+          {title || activeItem?.title}
         </Typography>
       </Stack>
     );
   }
 
-  return !isCard ? (
+  return (
     <Stack>
       <CoreBreadcrumb />
       {divider && <Divider sx={{ mb: 3, mt: 2 }} />}
     </Stack>
-  ) : (
-    <Card sx={{ p: { xs: 2, sm: 3 } }}>
-      <CoreBreadcrumb />
-    </Card>
   );
 }
 
 Breadcrumbs.propTypes = {
   data: PropTypes.array,
-  isCard: PropTypes.bool,
   divider: PropTypes.bool,
   title: PropTypes.string,
   icons: PropTypes.bool,
