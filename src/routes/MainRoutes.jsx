@@ -1,12 +1,15 @@
-import React, { lazy } from 'react';
+import { lazy } from 'react';
 
-// project import
-import MainLayout from 'layout/MainLayout';
-import Loadable from 'component/Loadable';
+// project imports
+import Loadable from 'components/Loadable';
+import MainLayout from 'layouts/MainLayout';
 
-const DashboardDefault = Loadable(lazy(() => import('views/Dashboard/Default')));
-const UtilsTypography = Loadable(lazy(() => import('views/Utils/Typography')));
-const SamplePage = Loadable(lazy(() => import('views/SamplePage')));
+// pages
+const DashboardDefault = Loadable(lazy(() => import('views/dashboard/default')));
+const SamplePage = Loadable(lazy(() => import('views/pages/SamplePage')));
+
+// utils
+const UtilsTypography = Loadable(lazy(() => import('views/components/Typography')));
 
 // ==============================|| MAIN ROUTES ||============================== //
 
@@ -22,8 +25,19 @@ const MainRoutes = {
       path: '/dashboard/default',
       element: <DashboardDefault />
     },
-    { path: '/utils/util-typography', element: <UtilsTypography /> },
-    { path: '/sample-page', element: <SamplePage /> }
+    {
+      path: '/sample-page',
+      element: <SamplePage />
+    },
+    {
+      path: 'components',
+      children: [
+        {
+          path: 'typography',
+          element: <UtilsTypography />
+        }
+      ]
+    }
   ]
 };
 

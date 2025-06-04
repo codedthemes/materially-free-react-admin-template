@@ -1,0 +1,31 @@
+/* simpebar styles */
+@import 'simplebar-react/dist/simplebar.min.css';
+
+@import 'simplebar-react/dist/simplebar.min.css';
+
+/* apex chart styles */
+.apexcharts-legend-marker {
+  margin-right: 8px !important;
+}
+
+.apexcharts-legend-text {
+  padding-right: 4px;
+}
+
+.apexcharts-canvas .apexcharts-svg {
+  background: transparent !important;
+}
+
+/* If .apexcharts-tooltip-title is missing */
+.apexcharts-tooltip:not(:has(.apexcharts-tooltip-title)) > .apexcharts-active {
+  padding-bottom: 0;
+}
+
+/* If .apexcharts-tooltip-title is present but empty */
+.apexcharts-tooltip:has(.apexcharts-tooltip-title:empty) > .apexcharts-active {
+  padding-bottom: 0;
+}
+
+.apexcharts-tooltip-text-y-label:empty + .apexcharts-tooltip-text-y-value {
+  margin-left: 0;
+}
