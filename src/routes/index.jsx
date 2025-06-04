@@ -1,11 +1,13 @@
-import { useRoutes } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 // routes
 import MainRoutes from './MainRoutes';
-import AuthenticationRoutes from './AuthenticationRoutes';
+import PagesRoutes from './PagesRoutes';
 
 // ==============================|| ROUTING RENDER ||============================== //
 
-export default function ThemeRoutes() {
-  return useRoutes([MainRoutes, AuthenticationRoutes]);
-}
+const router = createBrowserRouter([MainRoutes, PagesRoutes], {
+  basename: import.meta.env.VITE_APP_BASE_URL
+});
+
+export default router;
