@@ -36,6 +36,7 @@
     "@eslint/compat": "1.2.9",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.27.0",
+    "env-cmd": "10.1.0",
     "eslint": "9.27.0",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-jsx-a11y": "6.10.2",
